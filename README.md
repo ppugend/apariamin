@@ -74,6 +74,7 @@ Run `docker compose up -d` or `docker-compose up -d` from the workspace path to 
 
 To debug PHP code, start the containers using the `docker-compose up` task.  
 Then press `F5` in VSCode to launch the debugger. Xdebug will communicate through port `9003`.  
+Access the web page via 127.0.0.1:8080.  
 Set breakpoints in your PHP code and test the functionality on the PHP-based web page.  
 You can inspect variable values and step through the code during execution.
 
