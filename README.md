@@ -10,6 +10,9 @@ This project is a Docker Compose-based alternative to XAMPP, providing a lightwe
 
 This project is licensed under the MIT License. See the LICENSE file for details.
 
+## Buy me a ko-fi
+[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/B0B21CR05U)
+
 ## Initial Setup
 
 ### 1. Open the Cloned Repository in VSCode and Install Recommended Extensions
