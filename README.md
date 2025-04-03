@@ -34,10 +34,10 @@ Edit the `.env` file as needed to enter the database root password, database nam
 
 ### 3. Configure `docker-compose.override.yml` for Development
 
-For development environments, apply the following configuration to use a dedicated database volume for development and prevent containers from restarting automatically. Copy the `docker-compose.override.dev.yml` file to `docker-compose.override.yml`:
+For development environments, apply the following configuration to use a dedicated database volume for development and prevent containers from restarting automatically. Copy the `example_docker-compose.override.dev.yml` file to `docker-compose.override.yml`:
 
 ```bash
-cp [WORKSPACE_PATH]/docker-compose.override.dev.yml docker-compose.override.yml
+cp [WORKSPACE_PATH]/example_docker-compose.override.dev.yml docker-compose.override.yml
 ```
 
 Replace `[WORKSPACE_PATH]` with the appropriate path to your workspace.
