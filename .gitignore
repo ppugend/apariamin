@@ -1,0 +1,118 @@
+# Docker volumes (local DB data)
+db_data/
+**/db_data/
+db_data_dev/
+**/db_data_dev/
+
+# ================================
+# OS-specific Ignored Files
+# ================================
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon
+._*
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
+*.icloud
+
+# Linux
+*~
+.fuse_hidden*
+.directory
+.Trash-*
+.nfs*
+
+# Windows
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+*.stackdump
+[Dd]esktop.ini
+$RECYCLE.BIN/
+*.cab
+*.msi
+*.msix
+*.msm
+*.msp
+*.lnk
+
+# ================================
+# PHP / Web Development
+# ================================
+
+*.log
+*.cache
+*.tmp
+*.bak
+*.swp
+*.sql
+*.sqlite
+
+# Composer
+vendor/
+composer.lock
+
+# Node (if front is included)
+node_modules/
+dist/
+build/
+
+# ================================
+# Docker / DevContainer
+# ================================
+
+# Docker Compose override or env files
+docker-compose.override.yml
+docker-compose.override.*.yml
+docker-compose.*.override.yml
+docker-compose.debug.yml
+
+# Docker build artifacts (optional)
+**/build/
+**/cache/
+
+# DevContainer specific files
+.devcontainer/devcontainer.env
+.devcontainer/.devcontainer.json
+
+# Xdebug logs
+xdebug.log
+/tmp/xdebug.log
+
+# ================================
+# VSCode
+# ================================
+
+.vscode/
+!.vscode/launch.json
+!.vscode/settings.json
+
+# ================================
+# Environment / Secrets
+# ================================
+
+.env
+.env.local
+.env.*.local
+.envrc
+.env.bak
+
+# ================================
+# Git
+# ================================
+
+.git/

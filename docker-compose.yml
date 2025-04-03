@@ -1,0 +1,44 @@
+services:
+  web:
+    build: ./docker-images/apariamin-web
+    container_name: apariamin-web
+    restart: unless-stopped
+    ports:
+      - "127.0.0.1:8080:80"  # external port of web server is 8080
+    volumes:
+      - ./www:/var/www/html
+    depends_on:
+      - db
+
+  db:
+    image: mariadb:11.4.5-ubi9
+    container_name: apariamin-db
+    restart: unless-stopped
+    ports:
+      - "127.0.0.1:3306:3306"  # external port of MySQL is 3306
+    environment:
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+      MYSQL_DATABASE: ${MYSQL_DATABASE}
+      MYSQL_USER: ${MYSQL_USER}
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD}
+    volumes:
+      # mount host volume
+      # - ./db_data:/var/lib/mysql
+      # mount container volume
+      - db_data:/var/lib/mysql
+  phpmyadmin:
+    image: phpmyadmin:latest
+    container_name: apariamin-pma
+    restart: unless-stopped
+    ports:
+      - "127.0.0.1:8090:80"  # external port of phpMyAdmin is 8090
+    environment:
+      PMA_HOST: db
+      PMA_PORT: 3306
+      PMA_USER: ${MYSQL_USER}
+      PMA_PASSWORD: ${MYSQL_PASSWORD}
+    depends_on:
+      - db
+
+volumes:
+  db_data:
