@@ -63,7 +63,7 @@ Here are the available tasks:
 | `Apariamin Compose stop`                      | Stops running containers without removing them. |
 | `Apariamin Compose remove containers`          | Stops and removes containers (equivalent to `docker-compose down`). |
 | `Apariamin Compose remove volume storage(dev)`| Removes the development database volume `apariamin_db_data_dev`. |
-| `Apariamin open phpmyadmin in browser`| Opens phpMyAdmin in your default browser at `http://localhost:8090`. |
+| `Apariamin open web and phpmyadmin in browser`| Opens the development web page and phpMyAdmin in your default browser. |
 
 
 ## Running on a Production Server

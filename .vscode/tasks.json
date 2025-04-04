@@ -4,8 +4,9 @@
         {
             "label": "Apariamin Compose build",
             "type": "shell",
-            "command": "docker-compose",
+            "command": "docker",
             "args": [
+                "compose",
                 "-f", "docker-compose.yml",
                 "-f", "docker-compose.override.dev.yml",
                 "build"
@@ -19,8 +20,9 @@
         {
             "label": "Apariamin Compose up",
             "type": "shell",
-            "command": "docker-compose",
+            "command": "docker",
             "args": [
+                "compose",
                 "-f", "docker-compose.yml",
                 "-f", "docker-compose.override.dev.yml",
                 "up", "-d"
@@ -34,8 +36,9 @@
         {
             "label": "Apariamin Compose up with rebuild image",
             "type": "shell",
-            "command": "docker-compose",
+            "command": "docker",
             "args": [
+                "compose",
                 "-f", "docker-compose.yml",
                 "-f", "docker-compose.override.dev.yml",
                 "up", "-d"
@@ -49,8 +52,9 @@
         {
             "label": "Apariamin Compose stop",
             "type": "shell",
-            "command": "docker-compose",
+            "command": "docker",
             "args": [
+                "compose",
                 "-f", "docker-compose.yml",
                 "-f", "docker-compose.override.dev.yml",
                 "stop"
@@ -64,8 +68,9 @@
         {
             "label": "Apariamin Compose remove containers",
             "type": "shell",
-            "command": "docker-compose",
+            "command": "docker",
             "args": [
+                "compose",
                 "-f", "docker-compose.yml",
                 "-f", "docker-compose.override.dev.yml",
                 "down"
@@ -90,10 +95,29 @@
             }
         },
         {
-            "label": "Apariamin open phpmyadmin in browser",
+            "label": "Apariamin open web and phpmyadmin in browser",
             "type": "shell",
-            "command": "open",
-            "args": ["http://localhost:8090"],
+            "osx": {
+                "command": "sh",
+                "args": [
+                    "-c",
+                    "open http://localhost:8080 & open http://localhost:8090"
+                ]
+         },
+            "linux": {
+                "command": "echo",
+                "args": [
+                    "ctrl + click this link to open the development web page `http://localhost:8080`\r\n",
+                    "ctrl + click this link to open phpMyAdmin `http://localhost:8090`\r\n"
+                ],
+            },            
+            "windows":{
+                "command": "echo",
+                "args": [
+                    "ctrl + click this link to open the development web page `http://localhost:8080`\r\n",
+                    "ctrl + click this link to open phpMyAdmin `http://localhost:8090`\r\n"
+                ],
+            },            
             "problemMatcher": [],
             "group": {
                 "kind": "build",

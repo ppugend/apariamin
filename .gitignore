@@ -98,6 +98,7 @@ xdebug.log
 # ================================
 
 .vscode/*
+# !.vscode/*.sh
 !.vscode/launch.json
 !.vscode/settings.json
 !.vscode/extensions.json
