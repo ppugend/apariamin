@@ -1,0 +1,10 @@
+{
+    "recommendations": [
+        "ms-azuretools.vscode-docker",
+        "xdebug.php-pack",
+        "xdebug.php-debug"
+    ],
+    "unwantedRecommendations": [
+        
+    ]
+}

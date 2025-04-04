@@ -1,0 +1,104 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Apariamin Compose build",
+            "type": "shell",
+            "command": "docker-compose",
+            "args": [
+                "-f", "docker-compose.yml",
+                "-f", "docker-compose.override.dev.yml",
+                "build"
+            ],
+            "problemMatcher": [],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        },
+        {
+            "label": "Apariamin Compose up",
+            "type": "shell",
+            "command": "docker-compose",
+            "args": [
+                "-f", "docker-compose.yml",
+                "-f", "docker-compose.override.dev.yml",
+                "up", "-d"
+            ],
+            "problemMatcher": [],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        },
+        {
+            "label": "Apariamin Compose up with rebuild image",
+            "type": "shell",
+            "command": "docker-compose",
+            "args": [
+                "-f", "docker-compose.yml",
+                "-f", "docker-compose.override.dev.yml",
+                "up", "-d"
+            ],
+            "problemMatcher": [],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        },
+        {
+            "label": "Apariamin Compose stop",
+            "type": "shell",
+            "command": "docker-compose",
+            "args": [
+                "-f", "docker-compose.yml",
+                "-f", "docker-compose.override.dev.yml",
+                "stop"
+            ],
+            "problemMatcher": [],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        },
+        {
+            "label": "Apariamin Compose remove containers",
+            "type": "shell",
+            "command": "docker-compose",
+            "args": [
+                "-f", "docker-compose.yml",
+                "-f", "docker-compose.override.dev.yml",
+                "down"
+            ],
+            "problemMatcher": [],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        },
+        {
+            "label": "Apariamin Compose remove volume storage(dev)",
+            "type": "shell",
+            "command": "docker",
+            "args": [
+                "volume", "rm", "apariamin_db_data_dev"
+            ],
+            "problemMatcher": [],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        },
+        {
+            "label": "Apariamin open phpmyadmin in browser",
+            "type": "shell",
+            "command": "open",
+            "args": ["http://localhost:8090"],
+            "problemMatcher": [],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        }
+    ]
+}
