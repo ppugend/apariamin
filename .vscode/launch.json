@@ -8,7 +8,9 @@
         "port": 9003,
         "pathMappings": {
           "/var/www/html": "${workspaceFolder}/www"
-        }
+        },
+        "preLaunchTask": "Apariamin Compose up with rebuild image",
+        "postDebugTask": "Apariamin Compose stop"
       }
     ]
   }

@@ -4,7 +4,7 @@ services:
     container_name: apariamin-web
     restart: unless-stopped
     ports:
-      - "127.0.0.1:8080:80"  # external port of web server is 8080
+      - "127.0.0.1:8000:80"  # external port of web server is 8000
     volumes:
       - ./www:/var/www/html
     depends_on:

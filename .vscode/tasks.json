@@ -14,7 +14,7 @@
             "problemMatcher": [],
             "group": {
                 "kind": "build",
-                "isDefault": true
+                "isDefault": false
             }
         },
         {
@@ -29,8 +29,6 @@
             ],
             "problemMatcher": [],
             "group": {
-                "kind": "build",
-                "isDefault": true
             }
         },
         {
@@ -46,7 +44,7 @@
             "problemMatcher": [],
             "group": {
                 "kind": "build",
-                "isDefault": true
+                "isDefault": false
             }
         },
         {
@@ -61,8 +59,6 @@
             ],
             "problemMatcher": [],
             "group": {
-                "kind": "build",
-                "isDefault": true
             }
         },
         {
@@ -77,8 +73,6 @@
             ],
             "problemMatcher": [],
             "group": {
-                "kind": "build",
-                "isDefault": true
             }
         },
         {
@@ -90,8 +84,6 @@
             ],
             "problemMatcher": [],
             "group": {
-                "kind": "build",
-                "isDefault": true
             }
         },
         {
@@ -101,28 +93,24 @@
                 "command": "sh",
                 "args": [
                     "-c",
-                    "open http://localhost:8080 & open http://localhost:8090"
+                    "open http://localhost:8000 & open http://localhost:8090"
                 ]
-         },
+            },
             "linux": {
                 "command": "echo",
                 "args": [
-                    "ctrl + click this link to open the development web page `http://localhost:8080`\r\n",
-                    "ctrl + click this link to open phpMyAdmin `http://localhost:8090`\r\n"
-                ],
-            },            
-            "windows":{
+                    "ctrl + click this link to open the development web page `http://localhost:8000`\n",
+                    "ctrl + click this link to open phpMyAdmin `http://localhost:8090`\n"
+                ]
+            },
+            "windows": {
                 "command": "echo",
                 "args": [
-                    "ctrl + click this link to open the development web page `http://localhost:8080`\r\n",
+                    "ctrl + click this link to open the development web page `http://localhost:8000`\r\n",
                     "ctrl + click this link to open phpMyAdmin `http://localhost:8090`\r\n"
-                ],
-            },            
-            "problemMatcher": [],
-            "group": {
-                "kind": "build",
-                "isDefault": true
-            }
+                ]
+            },
+            "problemMatcher": []
         }
     ]
 }
