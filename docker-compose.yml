@@ -1,6 +1,8 @@
 services:
   web:
-    build: ./docker-images/apariamin-web
+    build:
+      context: ./docker-images/apariamin-web
+      target: prod
     container_name: apariamin-web
     restart: unless-stopped
     ports:
@@ -11,7 +13,7 @@ services:
       - db
 
   db:
-    image: mariadb:11.4.5-ubi9
+    image: mariadb:11.4.13-ubi9
     container_name: apariamin-db
     restart: unless-stopped
     ports:
@@ -29,6 +31,7 @@ services:
   phpmyadmin:
     image: phpmyadmin:latest
     container_name: apariamin-pma
+    profiles: ["dev"]  # started only when the dev profile is enabled
     restart: unless-stopped
     ports:
       - "127.0.0.1:8090:80"  # external port of phpMyAdmin is 8090

@@ -8,7 +8,7 @@
             "args": [
                 "compose",
                 "-f", "docker-compose.yml",
-                "-f", "docker-compose.override.dev.yml",
+                "-f", "docker-compose.override.yml",
                 "build"
             ],
             "problemMatcher": [],
@@ -24,7 +24,7 @@
             "args": [
                 "compose",
                 "-f", "docker-compose.yml",
-                "-f", "docker-compose.override.dev.yml",
+                "-f", "docker-compose.override.yml",
                 "up", "-d"
             ],
             "problemMatcher": [],
@@ -38,8 +38,8 @@
             "args": [
                 "compose",
                 "-f", "docker-compose.yml",
-                "-f", "docker-compose.override.dev.yml",
-                "up", "-d"
+                "-f", "docker-compose.override.yml",
+                "up", "-d", "--build"
             ],
             "problemMatcher": [],
             "group": {
@@ -54,7 +54,7 @@
             "args": [
                 "compose",
                 "-f", "docker-compose.yml",
-                "-f", "docker-compose.override.dev.yml",
+                "-f", "docker-compose.override.yml",
                 "stop"
             ],
             "problemMatcher": [],
@@ -68,7 +68,7 @@
             "args": [
                 "compose",
                 "-f", "docker-compose.yml",
-                "-f", "docker-compose.override.dev.yml",
+                "-f", "docker-compose.override.yml",
                 "down"
             ],
             "problemMatcher": [],
