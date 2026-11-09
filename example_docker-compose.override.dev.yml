@@ -1,5 +1,7 @@
 services:
   web:
+    build:
+      target: dev
     restart: "no"
   db:
     restart: "no"
